@@ -4,7 +4,7 @@ export default function Loaders() {
 		<div className={"item"}>
 			<Loader
 				type="box-rotate-x"
-				bgColor={"#851515"}
+				bgColor={"##3f51b5"}
 				title={"box-rotate-x"}
 				color={"#FFFFFF"}
 				size={100}
