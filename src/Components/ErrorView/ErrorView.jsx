@@ -1,17 +1,15 @@
 import PropTypes from "prop-types";
 import errorImage from "./errorImage.jpg";
+import { Div, P } from "./ErrorView.styled";
 
-function ErrorView({ texterror }) {
+export default function ErrorView({ texterror }) {
 	return (
-		<div role="alert">
-			<img src={errorImage} width="550" alt="sadcat" />
-			<p text={texterror}>{texterror}</p>
-		</div>
+		<Div role="error">
+			<P text={texterror}>{texterror}</P>
+			<img src={errorImage} width="500" alt="error" />
+		</Div>
 	);
 }
-
 ErrorView.propTypes = {
 	texterror: PropTypes.string.isRequired,
 };
-
-export default ErrorView;

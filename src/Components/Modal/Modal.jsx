@@ -1,6 +1,6 @@
+import PropTypes from "prop-types";
 import { Component } from "react";
 import { createPortal } from "react-dom";
-import PropTypes from "prop-types";
 import { Backdrop, Modalwindow } from "./Modal.styled";
 const modalRoot = document.querySelector("#modal-root");
 
@@ -31,16 +31,14 @@ class Modal extends Component {
 		return createPortal(
 			<Backdrop onClick={this.handleBackdropClick}>
 				<Modalwindow>
-					<img src={largeImageURL} alt="" />
+					<img src={largeImageURL} alt="largeImage" />
 				</Modalwindow>
 			</Backdrop>,
 			modalRoot
 		);
 	}
 }
-
 Modal.propTypes = {
 	onToggleModal: PropTypes.func.isRequired,
 };
-
 export default Modal;

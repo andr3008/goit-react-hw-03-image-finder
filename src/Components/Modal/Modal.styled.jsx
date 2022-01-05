@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+
 export const Backdrop = styled.div`
 	position: fixed;
 	top: 0;
@@ -14,5 +15,5 @@ export const Backdrop = styled.div`
 
 export const Modalwindow = styled.div`
 	max-width: calc(100vw - 48px);
-	max-height: calc(100vh - 24px);
+	max-height: calc(100vh - 0px);
 `;
