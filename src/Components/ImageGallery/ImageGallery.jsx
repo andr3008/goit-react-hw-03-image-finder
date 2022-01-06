@@ -23,5 +23,4 @@ ImageGallery.propTypes = {
 			id: PropTypes.number.isRequired,
 		})
 	),
-	onOpenModal: PropTypes.func.isRequired,
 };
