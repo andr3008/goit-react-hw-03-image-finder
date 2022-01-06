@@ -19,8 +19,10 @@ export default function ImageGalleryItem({
 	);
 }
 ImageGalleryItem.propTypes = {
-	largeImageURL: PropTypes.string.isRequired,
-	tags: PropTypes.string.isRequired,
-	webformatURL: PropTypes.string.isRequired,
+	image: PropTypes.shape({
+		webformatURL: PropTypes.string.isRequired,
+		largeImageURL: PropTypes.string.isRequired,
+		tags: PropTypes.string,
+	}),
 	onOpenModal: PropTypes.func.isRequired,
 };
