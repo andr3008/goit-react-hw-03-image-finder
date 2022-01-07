@@ -5,7 +5,7 @@ import { Wrapper } from "./App.styled";
 import Searchbar from "./Components/Searchbar/Searchbar";
 import ImageGallery from "./Components/ImageGallery/ImageGallery";
 import Button from "./Components/Button/Button";
-import LoaderComponent from "./Components/LoaderComponent/LoaderComponent";
+import Loader from "./Components/Loader/Loader";
 import Modal from "./Components/Modal/Modal";
 import ErrorView from "./Components/ErrorView/ErrorView";
 
@@ -81,7 +81,7 @@ export default class App extends Component {
 				{images.length > 0 && !error && (
 					<ImageGallery images={images} onOpenModal={this.onOpenModal} />
 				)}
-				{isLoading && <LoaderComponent />}
+				{isLoading && <Loader />}
 				{!isLoading && images.length >= 12 && !error && (
 					<Button onLoadMore={this.onLoadMore} />
 				)}
