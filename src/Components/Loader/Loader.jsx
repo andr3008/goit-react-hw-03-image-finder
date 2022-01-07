@@ -1,10 +1,15 @@
 import GridLoader from "react-spinners/GridLoader";
-import { Div } from "./Loader.styled";
+import { css } from "@emotion/react";
+
+const override = css`
+	display: block;
+	margin: 0 auto;
+`;
 
 export default function Loader() {
 	return (
-		<Div>
-			<GridLoader size={25} color={"#3f51b5"} />
-		</Div>
+		<div>
+			<GridLoader css={override} size={25} color={"#3f51b5"} />
+		</div>
 	);
 }
